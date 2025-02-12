@@ -1,0 +1,11 @@
+.container-navbar{
+    background-color: #402D00;
+    height: 60px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+.titulo{
+    color: #C4D107;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
