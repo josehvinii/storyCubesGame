@@ -25,12 +25,17 @@
 /* Container onde acontece o Sorteio das imagens (o que fica no meio da tela) */
 .container-icones {
     background-color: #AE9E78;
-    height: 250px;
+    height: 150px;
     width: 550px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
+}
+.iconesSorteados{
+    width: 45px;
+    height: 45px;
+    margin: 6px;
 }
 
 
