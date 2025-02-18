@@ -6,3 +6,10 @@
     justify-content: center;
     flex-direction: column;
 }
+
+.titulo2{
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: #75653e;
+    position: relative;
+    top: 150px;
+}

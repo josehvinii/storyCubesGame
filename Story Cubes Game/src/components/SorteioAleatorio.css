@@ -26,16 +26,16 @@
 .container-icones {
     background-color: #AE9E78;
     height: 200px;
-    width: 900px;
+    width: 700px;
     border-radius: 30px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
 .icone-sorteado{
-    width: 90px;
-    height: 90px;
-    margin: 6px;
+    width: 80px;
+    height: 80px;
+    margin: 30px;
 }
 
 

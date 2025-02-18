@@ -24,8 +24,16 @@ function SorteioAleatorio() {
   ];
 
   const sortearImagens = () => {
-    const novaImagem = todasImagens[Math.floor(Math.random() * todasImagens.length)];
-    setImagens([novaImagem]); // Atualiza a imagem sorteada
+    if (imagens.length < 5) {
+      let novaImagem;
+      do {
+        novaImagem = todasImagens[Math.floor(Math.random() * todasImagens.length)]; // Sorteia um ícone aleatório
+      } while (imagens.includes(novaImagem));
+      
+      setImagens([...imagens, novaImagem]);
+    } else {
+      setImagens([]); // Reinicia os ícones quando chegar no quinto ícone (quando o usuário clicar no botão pela sexta vez)
+    }
   };
 
   return (
@@ -34,10 +42,11 @@ function SorteioAleatorio() {
         <Icon icon="game-icons:archive-register" className='livro' />
         
         <div className='container-icones'>
-          {imagens.map((img, index) => (
- 
-            <Icon key={img} icon={img} className='icone-sorteado' />
+
+          {imagens.map((img) => ( // "Mapeia" o ícone no array e aparece aqui
+            <Icon key={img} icon={img} className='icone-sorteado' /> // Mostra o Ícone na div que está no meio da tela
           ))}
+
         </div>
 
         <Icon icon="game-icons:archive-research" className='livro' />
