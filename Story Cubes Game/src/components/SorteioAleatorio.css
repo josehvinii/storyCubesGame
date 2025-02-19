@@ -40,6 +40,14 @@
 
 
 /* Botão de sortear as imagens */
+
+.div-botoes{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+}
+
 .sortear {
     display: flex;
     align-items: center;

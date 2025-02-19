@@ -29,15 +29,17 @@ function SorteioAleatorio() {
       do {
         novaImagem = todasImagens[Math.floor(Math.random() * todasImagens.length)]; // Sorteia um ícone aleatório
       } while (imagens.includes(novaImagem));
-      
       setImagens([...imagens, novaImagem]);
-    } else {
-      setImagens([]); // Reinicia os ícones quando chegar no quinto ícone (quando o usuário clicar no botão pela sexta vez)
     }
   };
 
+  function reiniciar(){
+    setImagens([]);
+  }
+
   return (
     <div className='container-sorteioAleatorio'>
+
       <div className='container-livros'>
         <Icon icon="game-icons:archive-register" className='livro' />
         
@@ -52,7 +54,11 @@ function SorteioAleatorio() {
         <Icon icon="game-icons:archive-research" className='livro' />
       </div>
 
-      <button className='sortear' onClick={sortearImagens}>Sortear imagem</button>
+      <div className='div-botoes'>
+      <button className='sortear' onClick={sortearImagens} disabled={imagens.length >= 5}>Sortear imagem</button>
+      <button className='sortear' onClick={reiniciar}>Reiniciar</button>
+      </div>
+
     </div>
   );
 }
